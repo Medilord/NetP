@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+	<meta charset="UTF-8">
     <title>Таблица экзотических животных</title>
 </head>
 <body>
-    <p>
-        <h2><a href="index.html">Главная страница</a></h2>
-        <h3><a href="table.html">Список животных</a></h3>
-    </p>
+    <h2><a href="index.html">Главная страница</a></h2>
+    <h3><a href="table.html">Список животных</a></h3>
+    
 
     <hr size="5" color="grey" noshade>
 
     <h2 align="center">Таблица экзотических животных</h2>
 
     <form>
-            <b><span>Настройки графика</span></b></br>
+            <b><span>Настройки графика</span></b><br>
             Ось X: 
             <select name="x_axis">
                 <option value="name">Название</option>
@@ -39,7 +39,7 @@
             </select>
             
             <input type="submit" value="Построить график">
-    </form></br>
+    </form><br>
 
     <form>
         <b><span>Сортировка</span></b>
@@ -55,7 +55,7 @@
                 </select>
             </span>
             <span>по убыванию? <input type="checkbox" name="sort1_desc"></span>
-		</p></br>
+		</p><br>
         <p>
 			
 			Второй уровень:
@@ -67,7 +67,7 @@
 				<option>Цена, руб.</option>
 			</select>
 			<span>по убыванию? <input type="checkbox" name="sort2_desc"></span>
-		</p></br>
+		</p><br>
         <p>
 			Третий уровень:
 			<select name="sort3">
@@ -79,10 +79,10 @@
 			</select>
 			<span>по убыванию? <input type="checkbox" name="sort3_desc"></span>
 		</p> <input type="submit" value="Сортировать">
-	</form></br>
+	</form><br>
 
     <form>
-            <b><span>Фильтры</span></b></br>
+            <b><span>Фильтры</span></b><br>
             Место обитания:
             <select name="habitat_filter">
                 <option value="all">Все</option>
@@ -99,7 +99,7 @@
             Максимальный вес (кг): <input type="number" name="max_weight" min="0" max="10000">
             
             <input type="submit" value="Применить фильтры">
-    </form></br>
+    </form><br>
 
     <table border="1" cellpadding="5" cellspacing="0" width="50%">
         <thead>
@@ -569,8 +569,8 @@
 
     <hr>
     <p>
-        <b>Разработчик:</b></br> 
-		Б9123-09.03.04 (4 подгруппа)</br> 
+        <b>Разработчик:</b><br> 
+		Б9123-09.03.04 (4 подгруппа)<br> 
 		Манжелей Никита Александрович
     </p>
 </body>
