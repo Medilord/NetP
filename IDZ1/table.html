@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <title>Таблица экзотических животных</title>
+</head>
+<body>
+    <h2><a href="index.html">Главная страница</a></h2>
+    <h3><a href="table.html">Список животных</a></h3>
+    
+
+    <hr size="5" color="grey" noshade>
+
+    <h2 align="center">Таблица экзотических животных</h2>
+
+    <form>
+		<p><b>Значение по оси OX</b></p>
+		<p>
+			<label><input type="radio" name="axis_x">Место обитания</label><br>
+            <label><input type="radio" name="axis_x">Продолжительность жизни</label><br>
+			<label><input type="radio" name="axis_x">Год открытия</label>
+		</p>
+		<p><b>Значение по оси OY</b></p>
+		<p>
+			<label><input type="checkbox"> Максимальный вес</label><br>
+			<label><input type="checkbox"> Средний вес</label><br>
+			<label><input type="checkbox"> Минимальный размер</label><br>
+			<label><input type="checkbox"> Максимальный размер</label>
+		</p>
+		<input type="submit" value="Построить">
+	</form><br>
+    
+    <form>
+        <b><span>Фильтры</span></b><br>
+		<p>
+			<label for="name">Название: </label><input type="text" id="name">
+		</p>
+		<p>
+			<label for="category">Место обитания: </label><input type="text" id="category">
+		</p>
+		<p>
+			<label>
+				Вес, кг: от <input type="text" size="8">
+			</label>
+			<label>
+				до <input type="text" size="8">
+			</label>
+		</p>
+        <p>
+			<label>
+				Размер, см: от <input type="text" size="8">
+			</label>
+			<label>
+				до <input type="text" size="8">
+			</label>
+		</p>
+        <p>
+			<label>
+				Продолжительность жизни, лет: от <input type="text" size="8">
+			</label>
+			<label>
+				до <input type="text" size="8">
+			</label>
+		</p>
+        <p>
+			<label>
+				Год открытия: от <input type="text" size="8">
+			</label>
+			<label>
+				до <input type="text" size="8">
+			</label>
+		</p>
+		<input type="submit" value="Найти">
+	</form><br>
+
+    <form>
+        <b><span>Сортировка</span></b>
+		<p>
+            <span>
+                Первый уровень:
+                <select name="sort1">
+                    <option>Название</option>
+                    <option>Место обитания</option>
+                    <option>Вес</option>
+                    <option>Размер</option>
+                    <option>Продолжительность жизни</option>
+                    <option>Год открытия</option>
+                </select>
+            </span>
+            <span>по убыванию? <input type="checkbox" name="sort1_desc"></span>
+		</p><br>
+        <p>
+			
+			Второй уровень:
+			<select name="sort2">
+				<option>Название</option>
+                <option>Место обитания</option>
+                <option>Вес</option>
+                <option>Размер</option>
+                <option>Продолжительность жизни</option>
+                <option>Год открытия</option>
+			</select>
+			<span>по убыванию? <input type="checkbox" name="sort2_desc"></span>
+		</p><br>
+        <p>
+			Третий уровень:
+			<select name="sort3">
+				<option>Название</option>
+                <option>Место обитания</option>
+                <option>Вес</option>
+                <option>Размер</option>
+                <option>Продолжительность жизни</option>
+                <option>Год открытия</option>
+			</select>
+			<span>по убыванию? <input type="checkbox" name="sort3_desc"></span>
+		</p> <input type="submit" value="Сортировать">
+	</form><br>
+
+    <table border="1" cellpadding="5" cellspacing="0" width="50%">
+        <thead>
+            <tr bgcolor="#e0e0e0">
+            <th>Название</th>
+            <th>Место обитания</th>
+            <th>Вес (кг)</th>
+            <th>Размер (см)</th>
+            <th>Продолжительность жизни (лет)</th>
+            <th>Год открытия</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Фенек</td>
+                <td>Пустыня</td>
+                <td>1.5</td>
+                <td>40</td>
+                <td>14</td>
+                <td>1780</td>
+            </tr>
+            <tr>
+                <td>Сурикат</td>
+                <td>Пустыня</td>
+                <td>0.7</td>
+                <td>35</td>
+                <td>12</td>
+                <td>1776</td>
+            </tr>
+            <tr>
+                <td>Аксолотль</td>
+                <td>Водная среда</td>
+                <td>0.3</td>
+                <td>30</td>
+                <td>15</td>
+                <td>1864</td>
+            </tr>
+            <tr>
+                <td>Палочник</td>
+                <td>Лес</td>
+                <td>0.03</td>
+                <td>15</td>
+                <td>2</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Тукан</td>
+                <td>Тропики</td>
+                <td>0.6</td>
+                <td>65</td>
+                <td>20</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Окапи</td>
+                <td>Лес</td>
+                <td>250</td>
+                <td>250</td>
+                <td>30</td>
+                <td>1901</td>
+            </tr>
+            <tr>
+                <td>Такин</td>
+                <td>Горы</td>
+                <td>300</td>
+                <td>220</td>
+                <td>16</td>
+                <td>1850</td>
+            </tr>
+            <tr>
+                <td>Малайский шестокрыл</td>
+                <td>Лес</td>
+                <td>1.7</td>
+                <td>40</td>
+                <td>17</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Дюгонь</td>
+                <td>Водная среда</td>
+                <td>400</td>
+                <td>300</td>
+                <td>70</td>
+                <td>1766</td>
+            </tr>
+            <tr>
+                <td>Нарвал</td>
+                <td>Арктика</td>
+                <td>1600</td>
+                <td>500</td>
+                <td>50</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Ай-ай</td>
+                <td>Лес</td>
+                <td>2.5</td>
+                <td>44</td>
+                <td>23</td>
+                <td>1782</td>
+            </tr>
+            <tr>
+                <td>Какапо</td>
+                <td>Лес</td>
+                <td>4</td>
+                <td>64</td>
+                <td>90</td>
+                <td>1845</td>
+            </tr>
+            <tr>
+                <td>Звездонос</td>
+                <td>Лес</td>
+                <td>0.05</td>
+                <td>20</td>
+                <td>3</td>
+                <td>1801</td>
+            </tr>
+            <tr>
+                <td>Малая панда</td>
+                <td>Горы</td>
+                <td>6</td>
+                <td>64</td>
+                <td>14</td>
+                <td>1825</td>
+            </tr>
+            <tr>
+                <td>Комондор</td>
+                <td>Саванна</td>
+                <td>60</td>
+                <td>80</td>
+                <td>12</td>
+                <td>1544</td>
+            </tr>
+            <tr>
+                <td>Грифовая черепаха</td>
+                <td>Водная среда</td>
+                <td>80</td>
+                <td>80</td>
+                <td>70</td>
+                <td>1783</td>
+            </tr>
+            <tr>
+                <td>Мандрил</td>
+                <td>Лес</td>
+                <td>50</td>
+                <td>95</td>
+                <td>40</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Голый землекоп</td>
+                <td>Пустыня</td>
+                <td>0.035</td>
+                <td>13</td>
+                <td>32</td>
+                <td>1842</td>
+            </tr>
+            <tr>
+                <td>Фосса</td>
+                <td>Лес</td>
+                <td>12</td>
+                <td>80</td>
+                <td>20</td>
+                <td>1833</td>
+            </tr>
+            <tr>
+                <td>Тапир</td>
+                <td>Лес</td>
+                <td>300</td>
+                <td>220</td>
+                <td>30</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Капибара</td>
+                <td>Водная среда</td>
+                <td>65</td>
+                <td>134</td>
+                <td>12</td>
+                <td>1766</td>
+            </tr>
+            <tr>
+                <td>Ленивец</td>
+                <td>Лес</td>
+                <td>9</td>
+                <td>75</td>
+                <td>30</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Бинтуронг</td>
+                <td>Лес</td>
+                <td>14</td>
+                <td>96</td>
+                <td>25</td>
+                <td>1822</td>
+            </tr>
+            <tr>
+                <td>Тасманский дьявол</td>
+                <td>Лес</td>
+                <td>12</td>
+                <td>65</td>
+                <td>8</td>
+                <td>1807</td>
+            </tr>
+            <tr>
+                <td>Вомбат</td>
+                <td>Лес</td>
+                <td>35</td>
+                <td>115</td>
+                <td>15</td>
+                <td>1797</td>
+            </tr>
+            <tr>
+                <td>Ехидна</td>
+                <td>Лес</td>
+                <td>6.5</td>
+                <td>53</td>
+                <td>45</td>
+                <td>1792</td>
+            </tr>
+            <tr>
+                <td>Утконос</td>
+                <td>Водная среда</td>
+                <td>2.4</td>
+                <td>50</td>
+                <td>17</td>
+                <td>1799</td>
+            </tr>
+            <tr>
+                <td>Киви</td>
+                <td>Лес</td>
+                <td>3.3</td>
+                <td>55</td>
+                <td>50</td>
+                <td>1813</td>
+            </tr>
+            <tr>
+                <td>Квокка</td>
+                <td>Лес</td>
+                <td>5</td>
+                <td>54</td>
+                <td>10</td>
+                <td>1696</td>
+            </tr>
+            <tr>
+                <td>Носач</td>
+                <td>Лес</td>
+                <td>24</td>
+                <td>76</td>
+                <td>20</td>
+                <td>1781</td>
+            </tr>
+            <tr>
+                <td>Галаго</td>
+                <td>Лес</td>
+                <td>0.3</td>
+                <td>37</td>
+                <td>16</td>
+                <td>1776</td>
+            </tr>
+            <tr>
+                <td>Лори</td>
+                <td>Лес</td>
+                <td>0.9</td>
+                <td>38</td>
+                <td>20</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Ирбис</td>
+                <td>Горы</td>
+                <td>55</td>
+                <td>130</td>
+                <td>15</td>
+                <td>1775</td>
+            </tr>
+            <tr>
+                <td>Филиппинский орёл</td>
+                <td>Лес</td>
+                <td>6.5</td>
+                <td>102</td>
+                <td>30</td>
+                <td>1896</td>
+            </tr>
+            <tr>
+                <td>Панголин</td>
+                <td>Лес</td>
+                <td>33</td>
+                <td>75</td>
+                <td>20</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Окапи</td>
+                <td>Лес</td>
+                <td>250</td>
+                <td>250</td>
+                <td>30</td>
+                <td>1901</td>
+            </tr>
+            <tr>
+                <td>Геренук</td>
+                <td>Саванна</td>
+                <td>45</td>
+                <td>160</td>
+                <td>12</td>
+                <td>1878</td>
+            </tr>
+            <tr>
+                <td>Дикдик</td>
+                <td>Саванна</td>
+                <td>6.5</td>
+                <td>70</td>
+                <td>10</td>
+                <td>1846</td>
+            </tr>
+            <tr>
+                <td>Гривистый волк</td>
+                <td>Саванна</td>
+                <td>23</td>
+                <td>130</td>
+                <td>15</td>
+                <td>1815</td>
+            </tr>
+            <tr>
+                <td>Манул</td>
+                <td>Горы</td>
+                <td>5</td>
+                <td>65</td>
+                <td>12</td>
+                <td>1776</td>
+            </tr>
+            <tr>
+                <td>Сервал</td>
+                <td>Саванна</td>
+                <td>18</td>
+                <td>100</td>
+                <td>20</td>
+                <td>1776</td>
+            </tr>
+            <tr>
+                <td>Каракал</td>
+                <td>Саванна</td>
+                <td>19</td>
+                <td>105</td>
+                <td>19</td>
+                <td>1776</td>
+            </tr>
+            <tr>
+                <td>Сайгак</td>
+                <td>Пустыня</td>
+                <td>40</td>
+                <td>130</td>
+                <td>12</td>
+                <td>1758</td>
+            </tr>
+            <tr>
+                <td>Дзерен</td>
+                <td>Пустыня</td>
+                <td>30</td>
+                <td>110</td>
+                <td>10</td>
+                <td>1777</td>
+            </tr>
+            <tr>
+                <td>Горная вискача</td>
+                <td>Горы</td>
+                <td>3</td>
+                <td>45</td>
+                <td>19</td>
+                <td>1814</td>
+            </tr>
+            <tr>
+                <td>Мархур</td>
+                <td>Горы</td>
+                <td>110</td>
+                <td>170</td>
+                <td>15</td>
+                <td>1838</td>
+            </tr>
+            <tr>
+                <td>Ньяла</td>
+                <td>Лес</td>
+                <td>120</td>
+                <td>135</td>
+                <td>16</td>
+                <td>1849</td>
+            </tr>
+            <tr>
+                <td>Бонго</td>
+                <td>Лес</td>
+                <td>400</td>
+                <td>250</td>
+                <td>19</td>
+                <td>1861</td>
+            </tr>
+            <tr>
+                <td>Аддакс</td>
+                <td>Пустыня</td>
+                <td>120</td>
+                <td>170</td>
+                <td>19</td>
+                <td>1816</td>
+            </tr>
+            <tr>
+                <td>Голубой баран</td>
+                <td>Горы</td>
+                <td>75</td>
+                <td>140</td>
+                <td>15</td>
+                <td>1837</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+    <p>
+        <b>Разработчик:</b><br> 
+		Б9123-09.03.04 (4 подгруппа)<br> 
+		Манжелей Никита Александрович
+    </p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Лабораторная работа Bootstrap</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </head>
+<body class="container">
+
+    <header>
+        <!-- Панель навигации -->
+        <nav class="navbar navbar-expand-md bg-light navbar-light">
+
+            <a class="navbar-brand" href="#">Экзотические животные</a>
+
+            <!-- Кнопка для свернутого меню -->
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- меню -->
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Список животных</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                    </li> -->
+                </ul>
+
+                 <!-- форма для поиска -->
+                <form  class="d-flex">
+                    <input class="form-control" type="text" placeholder="Найти">
+                    <button class="btn btn-outline-success" type="submit">Найти</button>
+                </form>
+
+            </div>
+            
+        </nav>
+    </header>
+
+    <!-- Галерея -->
+
+    <main>
+        <!-- Основной контент -->
+    </main>
+
+</body>
+</html>
