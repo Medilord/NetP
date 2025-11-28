@@ -1,6 +1,6 @@
-body{
+/* body{
     min-width: 600px;
-}
+} */
 
 a{
     text-decoration: none;
@@ -33,44 +33,19 @@ a{
     border-radius: 50%;
     height: 40px;
     vertical-align: middle;
-    
 }
 .slogan{
     display: inline;
     }
 
- 
-/* .search-box{
-    margin: auto;
-    float: right;
-    overflow: hidden;
-    
-} 
-
-.search-box input {
-    padding: 5px;
-}
-
-.search-box button {
-    padding: 5px 10px;
-
-    background-color: #4CAF50;
-    color: white;
-} */
 
 .main-menu {
-    float: left;
     margin: 10px;
     text-decoration: none;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    justify-items: center;
+    display: flex;
 }
 
 .menu-item {
-    display: inline;
     padding: 8px 15px;
     margin-left: 5px;
     border-radius: 0 15px;
@@ -83,12 +58,9 @@ a{
 }
 
 .content{
-    margin: 50px;
-    /* min-height: 1200px; */
+    margin: 0px 50px;
     text-align: center;
 }
-
-
 
 
 .top-gallery{
@@ -106,7 +78,7 @@ a{
     grid-gap: 5px;
 }
 .top-gallery > * {
-    min-height: 0; /* Важно для сжатия в grid */
+    min-height: 0;
     min-width: 0;
     overflow: hidden;
 }
@@ -270,3 +242,39 @@ a{
     color: grey;
 }
 
+
+@media (max-width: 768px) {
+
+    .main-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .menu-item{
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .top-gallery{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .top-gallery img {
+        height: 200px;
+    }
+
+    .content-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-content-block {
+        padding: 10px;
+    }
+    
+    
+}

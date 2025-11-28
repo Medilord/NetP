@@ -1,17 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Лабораторная работа Bootstrap</title>
+        <link href="./css/mdb.min.css" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
+
         <script src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="./js/mdb.umd.min.js"></script>
+        
     </head>
+    
 <body class="container">
 
     <header>
         <!-- Панель навигации -->
-        <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light p-2">
 
             <a class="navbar-brand" href="#">Экзотические животные</a>
 
@@ -22,7 +28,8 @@
                 data-bs-toggle="collapse" 
                 data-bs-target="#menu"
             >
-                <span class="navbar-toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                
             </button>
 
             <!-- меню -->
@@ -35,9 +42,9 @@
                     <li class="nav-item">
                     <a class="nav-link" href="#">Список животных</a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                     <a class="nav-link" href="#">Контакты</a>
-                    </li> -->
+                    </li>
                 </ul>
 
                  <!-- форма для поиска -->
@@ -52,10 +59,188 @@
     </header>
 
     <!-- Галерея -->
+    <div class="container my-4">
+        <div class="row g-2">
+            <div class="col-12 col-md-3 d-flex hover-zoom">
+                <img class="w-100 object-fit-cover" src="img/Fenek_big.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-3 d-flex flex-column gap-2">
+                <div class="hover-zoom"><img class="w-100 flex-grow-1 object-fit-cover" src="img/Dugon_big.png" alt=""></div>
+                <div class="hover-zoom"><img class="w-100 flex-grow-1 object-fit-cover" src="img/narval_big.jpg" alt=""></div>
+            </div>
+            <div class="col-12 col-md-3 d-flex flex-column gap-2">
+                <div class="hover-zoom"><img class="w-100 flex-grow-1 object-fit-cover" src="img/Okapi_big.jpg" alt=""></div>
+                <div class="hover-zoom"><img class="w-100 flex-grow-1 object-fit-cover" src="img/takin_big.jpg" alt=""></div>
+            </div>
+            <div class="col-12 col-md-3 d-flex hover-zoom">
+                <img class="w-100 object-fit-cover" src="img/Fenek_big.jpg" alt="">
+            </div>
+        </div>
+    </div>
 
-    <main>
-        <!-- Основной контент -->
+    <main class="w-100 container text-center">
+        <a class="w-100 h-100 mini1" href="#">
+            <div>
+                <img class="img-fluid w-75 h-75" alt="Рисунок" src="img/MalaiskyShestokril.jpg">
+            </div>
+            <span class="fw-bold">
+                Малайский шестокрыл
+            </span><br>
+            <span>
+                (лат. Galeopterus variegatus) <u>...</u>
+            </span>
+        </a>
+        <a class="w-100 h-100 mini2" href="#">
+            <div>
+                <img class="img-fluid object-fit-fill w-50 h-75" alt="Рисунок" src="img/Aksolotl.jpg">
+            </div>
+            <span class="fw-bold">
+                Аксолотль
+            </span><br>
+            <span>
+                (лат. Ambystoma mexicanum) <u>...</u>
+            </span>
+        </a>
+        <a class="w-100 h-100 mini3" href="#">
+            <div>
+                <img class="img-fluid w-50 h-75" alt="Рисунок" src="img/Sticks.jpg">
+            </div>
+            <span class="fw-bold">
+                Палочник
+            </span><br>
+            <span>
+                (лат. Phasmatodea) <u>...</u>
+            </span>
+        </a>
+        <a class="w-100 h-100 mini4" href="#">
+            <div>
+                <img class="img-fluid w-75 h-75" alt="Рисунок" src="img/Platypus.jpg">
+            </div>
+            <span class="fw-bold">
+                Утконос
+            </span><br>
+            <span>
+                (лат. Ornithorhynchus anatinus) <u>...</u>
+            </span>
+        </a>
+        <div class="content">
+            <img class="w-100 h-25" alt="Фенек" src="img/Fenek_big.jpg">
+            <div class="">
+                <span class="fw-bold">Фенек (Vulpes zerda)</span><br>
+            </div><!--
+                        -->
+            <div class="">
+                <span>Фенек, миниатюрная лисица пустынных регионов Северной Африки,
+                    является одним из самых узнаваемых и очаровательных животных благодаря
+                    своим непропорционально огромным ушам,
+                    которые не только служат для сверхчувствительного слуха,
+                    позволяющего улавливать малейшие движения добычи под песком,
+                    но и выполняют функцию терморегуляции,
+                    отводя излишки тепла от тела в условиях палящего солнца.
+                    Этот зверек, размером не больше домашней кошки,
+                    обладает густым мехом песочного цвета,
+                    защищающим его от перепадов температур,
+                    и невероятной прыгучестью, что в совокупности с ночным образом жизни
+                    делает его идеально приспособленным для выживания в суровых условиях Сахары,
+                    где он питается всем доступным — от насекомых и мелких позвоночных
+                    до яиц, плодов и кореньев.
+                </span>
+            </div>
+            <div>
+                <button>Подробнее»</button>
+            </div>
+        </div>
+        <a class="w-100 h-100 mini5" href="#">
+            <div>
+                <img class="img-fluid h-75" alt="Рисунок" src="img/Surikat.jpg">
+            </div>
+            <span class="fw-bold">
+                Сурикат
+            </span><br>
+            <span>
+                (лат. Suricata suricatta) <u>...</u>
+            </span>
+        </a>
+        <a class="w-100 h-100 mini6" href="#">
+            <div>
+                <img class="img-fluid h-75" alt="Рисунок" src="img/Takin.jpg">
+            </div>
+            <span class="fw-bold">
+                Такин
+            </span><br>
+            <span>
+                (лат. Budorcas taxicolor) <u>...</u>
+            </span>
+        </a>
     </main>
 
 </body>
+<footer>
+    <hr></he>
+    <span class="fw-bold">Разработчик</span><br>
+    <span>Б9123-09.03.04 (4 подгруппа)</span><br>
+    <span>Манжелей Никита Александрович</span><br>
+    <span>Создано в 2025 году</span>
+</footer>
 </html>
+
+
+<style>
+    p.lead {
+        text-align: justify;
+    }
+
+    @media (max-width: 767.98px) {
+        p.lead {
+            font-size: 1rem;
+        }
+    }
+
+    .toggler-icon {
+        background-image: url("img/Icons/Hamburger_icon.png") ;
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+
+    main{
+        width: 100%;
+        display: grid;
+        margin: 10px auto;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 5px;
+        grid-template-areas: "mini1 mini2 mini2 .  mini3  mini3 mini4"
+                            ". content content content content content ."
+                            ". content content content content content ."
+                            "mini5 content content content content content mini6";
+        height: 30%;
+    }
+
+    .mini1{
+        grid-area: mini1;
+    }
+    .mini2{
+        grid-area: mini2;
+    }
+    .mini3{
+        grid-area: mini3;
+    }
+    .mini4{
+        grid-area: mini4;
+    }
+    .mini5{
+        grid-area: mini5;
+    }
+    .mini6{
+        grid-area: mini6;
+    }
+    .content{
+        grid-area: content;
+    }
+
+</style>
