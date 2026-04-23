@@ -1,0 +1,329 @@
+colorBtn = #404090
+hoverColorBtn = #505050
+activeColorBtn = #202020
+radiusBtn = 5px
+btnActivity()
+    &:hover
+        background-color hoverColorBtn
+        color white
+    &:active
+        background-color activeColorBtn
+        color black
+createButton()
+    background-color colorBtn
+    color white
+    display inline
+    border-radius radiusBtn
+    btnActivity()
+
+container()
+    margin 10px auto
+    padding 10px
+    background-color #CCCCCC
+    border-radius 5px
+
+
+colorizeEven()
+    > :nth-of-type(even)
+        background-color #dddddd
+
+body
+    font-family arial
+    min-width 330px
+
+
+.nav
+    padding 5px 10px
+    background-color #604020
+    overflow hidden
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+
+.info
+    margin auto 0
+    &__logo
+        display inline
+        height 40px
+        width 40px
+        border-radius 15px
+        vertical-align middle
+
+    &__slogan
+        display inline
+        color white
+.search
+    margin auto 0
+    &__bar
+        display inline
+    &__btn
+        createButton()
+
+
+
+.menu
+    width 100%
+    @media (min-width 768.1px)
+
+        margin 5px
+        text-align right
+    @media (max-width 768px)
+        margin 5px auto
+        text-align center
+    &__item
+        display inline-block
+        padding 10px
+        color black
+        border-radius 15px 0
+        text-decoration none
+        &--active
+            background-color colorBtn
+            color white
+        btnActivity()
+
+
+
+
+.gallery
+    width 90%
+    margin 10px auto
+
+    @media (min-width 768.1px)
+        height 400px
+        display grid
+        gap 0px
+        grid-template-areas \
+            "big1 big1 small1"\
+            "big1 big1 small2"\
+            "big2 big2 small2"\
+            "big2 big2 small3"
+
+    @media (max-width 768px)
+        height auto
+        display flex
+        flex-direction column
+    &__link
+        overflow hidden
+        text-decoration none
+        &--big1
+            grid-area big1
+        &--big2
+            grid-area big2
+        &--small1
+            grid-area small1
+        &--small2
+            grid-area small2
+        &--small3
+            grid-area small3
+        &:hover
+            box-shadow 0px 0px 30px 5px rgba(0, 0, 0, 1)
+
+
+    &__image
+        overflow hidden
+        width 100%
+        height 100%
+        object-fit cover
+
+.catalog
+    margin 10px
+    display flex
+    text-align center
+    justify-content space-evenly
+
+    @media (max-width 768px)
+        flex-direction column
+        align-items center
+
+.card
+    display block
+    text-decoration none
+    color black
+    margin 10px
+    overflow hidden
+    width 10%
+    min-width 120px
+    padding 5px
+    border 1px solid
+
+
+    @media (max-width 768px)
+        width 60%
+
+    &__image
+        display block
+        margin auto
+        object-fit cover
+
+    &__title
+        font-weight bold
+
+
+
+.article
+    margin 10px auto
+    padding 30px
+    overflow hidden
+    width 60%
+    border-radius 15px
+    background-color #202020
+    line-height 1.5em
+    color white
+    text-align center
+
+    &__image
+        border-radius 20px
+        height 200px
+        width 100%
+        display block
+        margin auto
+        object-fit cover
+    &__title
+        font-weight bold
+
+    &__text
+        text-align justify
+
+    &__button
+        display block
+        margin 10px 0
+        padding 5px 10px
+        background-color colorBtn
+        color white
+        border-radius radiusBtn
+        btnActivity()
+
+.table
+    width 100%
+    border 5px solid #dddddd
+    margin-bottom 20px
+    border-radius 10px
+
+    &__header
+        font-weight bold
+        padding 5px
+        background-color #606060
+        border 1px solid #dddddd
+        border-radius 5px
+
+        color white
+
+    &__cell
+        border 1px solid #DDDDDD
+        border-radius 5px
+        padding 5px
+        &:hover
+            background-color #909090
+        &:active
+            background-color #999999
+
+    &__body
+        colorizeEven()
+    &__row
+        &:hover
+            background-color #CCCCCC
+
+
+.graph
+    display grid
+    grid-template-column: 1fr 1fr
+    grid-template-row: 1fr 1fr
+    justify-content space-evenly
+    container()
+
+
+
+    &__button
+        display block
+        margin 10px auto
+        grid-column 1/3
+        createButton()
+        width 20%
+        height 30px
+
+
+.filter
+    display block
+    text-align center
+    container()
+
+    &__label
+        margin 5px auto
+        color #1a3b5d
+        display block
+
+    &__input
+        width 60%
+        height 30px
+        border-radius 5px
+        border 1px solid black
+        padding 5px 15px
+        color #1a3b5d
+        text-align center
+
+    &__button
+        createButton()
+        width 20%
+        height 30px
+
+.sort
+    display block
+    text-align center
+    container()
+
+    &__selection
+        display block
+        margin 10px auto
+        width 60%
+        height 30px
+        border-radius 5px
+        border 1px solid black
+        padding 5px 15px
+        color #1a3b5d
+        text-align center
+
+    &__option
+        background-color lightgrey
+
+    &__button
+        createButton()
+        width 20%
+        height 30px
+
+
+.head
+    margin 20px auto
+    text-align center
+    container()
+    &__title
+        display inline
+        font-weight bold
+    &__image
+        display block
+        width 80%
+        margin 20px auto
+        border 4px solid black
+        border-radius 20px
+        object-fit cover
+    &__intro
+        display inline
+        color #1a3b5d
+
+.section
+    font-family sans-serif
+    border-left 3px solid #ddd
+    padding-left 1rem
+    container()
+
+    &__title
+        font-weight bold
+
+    &__intro
+        display block
+        margin 10px 0
+        color #666666
+        font-style italic
+
+    &__list
+        margin-bottom 10px
+        color #333333

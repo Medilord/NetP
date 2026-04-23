@@ -1,0 +1,17 @@
+extends template
+
+
+block nav
+    +createNavBar(navDict)
+block menu
+    +createMenu(dictMenu, "Список животных")
+
+block content
+    +createFormGraph(listGraphX, listGraphY)
+    hr
+    +createFormFilter(listFilter)
+    hr
+    +createFormSort(sortLevels, sortOptions)
+    hr
+    +createTable(tableHeaders, tableAnimals)
+

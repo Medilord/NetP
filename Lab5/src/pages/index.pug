@@ -1,0 +1,20 @@
+extends template
+
+
+block nav
+    +createNavBar(navDict)
+block menu
+    +createMenu(dictMenu, "Главная")
+
+block content
+    div.gallery
+        +createGallery(listImages)
+
+    div.catalog
+        +createCards(listSectionsUp)
+
+    div.article
+        +createArticle(dictArticleContent)
+
+    div.catalog
+        +createCards(listSectionsDown)

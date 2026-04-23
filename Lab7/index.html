@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор прямоугольной трапеции</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Прямоугольная трапеция</h2>
+
+    <div>
+        <label for="input-type">Тип входных данных:</label>
+        <select id="input-type">
+            <option value="height">Основания и высота</option>
+            <option value="side">Основания и боковая сторона</option>
+        </select>
+        <input type="button" class="btn" id="show-button" value="Показать">
+    </div>
+
+    <div class="image-container" id="image-container" >
+        <img id="trap-img" src="images/trapecia-2.png" alt="Схема трапеции">
+        <p id="image-placeholder"></p>
+    </div>
+
+    <div>
+        <label for="base1">Основание 1 (a):</label>
+        <input type="number" id="base1" min=0 max=200>
+        <div class="error-message" id="error-base1" hidden>Введите корректное положительное число.</div>
+    </div>
+
+    <div>
+        <label for="base2">Основание 2 (b):</label>
+        <input type="number" id="base2" min=0 max=200>
+        <div class="error-message" id="error-base2" hidden>Введите корректное положительное число (a ≠ b).</div>
+    </div>
+
+    <div>
+        <label id="param3-label" for="param3">Высота (h):</label>
+        <input type="number" id="param3" min=0 max=200>
+        <div class="error-message" id="error-param3" hidden>Введите корректное положительное число.</div>
+        <div class="error-message" id="error-math" hidden>Боковая сторона должна быть больше разности оснований</div>
+    </div>
+
+    <div class="checkbox-group">
+        <label>Найти:</label><br>
+        <label><input type="checkbox" id="do-angles"> Углы</label>
+        <label><input type="checkbox" id="do-perimeter"> Периметр</label>
+        <label><input type="checkbox" id="do-area"> Площадь</label>
+        <div class="error-message" id="error-checkbox" hidden>Выберите хотя бы одно вычисление</div>
+    </div>
+
+    <input type="button" class="btn" id="calc-button" value="Вычислить">
+    <input type="button" class="btn" id="clear-button" onclick="clearForm(this.form)" value="Очистить">
+
+    <div id="results" class="result" hidden>
+    </div>
+</div>
+
+<script src="javascript/index.js"></script>
+
+</body>
+</html>

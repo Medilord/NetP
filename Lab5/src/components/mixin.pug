@@ -1,0 +1,110 @@
+mixin createNavBar(navDict)
+    div.nav
+        div.info
+            img.info__logo(src= require("../images/" + navDict.logoImage))
+            span.info__slogan= " / " + navDict.slogan
+        div.search
+            input.search__bar(type= "search")
+            button.search__btn='Поиск'
+
+mixin createMenu(menu, active)
+    div.menu
+        each value, key in menu
+            if active == key
+                a.menu__item(class='menu__item--active' href= value)= key
+            else
+                a.menu__item(href= value)= key
+
+mixin createGallery(listImages)
+    each dict in listImages
+        a.gallery__link(class='gallery__link--' + dict.area href=dict.href)
+            img.gallery__image(src= require("../images/" + dict.image))
+
+
+mixin createCards(cards)
+    each dict in cards
+        a.card(href=dict.href)
+            img.card__image(src=require("../images/" + dict.image), alt="Рисунок")
+            div.card__title= dict.title
+            div.card__text= dict.text
+
+mixin createArticle(dictArticle)
+    img.article__image(src=require("../images/" + dictArticle.image), alt="Фенек")
+    div.article__title= dictArticle.title
+    div.article__text= dictArticle.text
+    button.article__button= "Подробнее..."
+
+mixin createTable(headers, list)
+    table.table
+        thead.table__head
+            tr
+                each header in headers
+                    th.table__header= header
+        tbody.table__body
+            each row in list
+                tr.table__row
+                    each value in row
+                        td.table__cell= value
+
+mixin createFormGraph(listX, listY)
+    form.graph
+        div.graph__inputs
+            span <b> Значение по оси X </b>
+            br
+            each item in listX
+                label.graph__label
+                    input(type='radio' name='axis_x')
+                    |  #{item}
+                br
+        div.graph__inputs
+            span <b> Значение по оси Y </b>
+            br
+            each item in listY
+                label.graph__label
+                    input(type='checkbox' name='axis_y')
+                    |  #{item}
+                br
+
+        button.graph__button= "Построить"
+div
+mixin createFormFilter(listFilter)
+    div
+        form.filter
+            span <b>Фильтры</b>
+                br
+                each item, key in listFilter
+                    label.filter__label(for=key)= item
+                        br
+                        input.filter__input(type="text" id=key)
+                    br
+            button.filter__button= "Найти"
+
+mixin createFormSort(sortLevels, sortOptions)
+    div
+        form.sort
+            span <b>Сортировка</b>
+                each level, name in sortLevels
+                    br
+                    div= level+" уровень"
+                        select.sort__selection(name= name)
+                            each option in sortOptions
+                                option.sort__option= option
+                        label.sort__label="по убыванию"
+                            input.sort__checkbox(type="checkbox" name=name+"__checkbox")
+            button.sort__button= "Сортировать"
+
+mixin createArticleHead(articleHead)
+    div.head
+        div.head__title= articleHead.title
+        img.head__image(src=require("../images/" + articleHead.image), alt="Фенек")
+        div.head__intro= articleHead.intro
+
+mixin createArticleSections(articleSections)
+    div
+        each dict in articleSections
+            details.section
+                summary.section__title= dict.summary
+                span.section__intro= dict.intro
+                #{dict.listType}
+                    each item in dict.items
+                        li.section__list= item

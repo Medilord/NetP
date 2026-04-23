@@ -1,0 +1,21 @@
+include ../components/mixin.pug
+include ../components/data.pug
+
+doctype html
+html(lang="en")
+    head
+        title #{title}
+    body
+        header
+            block nav
+            block menu
+
+        block content
+
+        block footer
+            footer
+                hr
+                span <b>Разработчик</b> <br>
+                span Б9123-09.03.04 (4 подгруппа) <br>
+                span Манжелей Никита Александрович <br>
+                span Создано в 2026 году

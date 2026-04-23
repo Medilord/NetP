@@ -1,0 +1,14 @@
+extends template
+
+block nav
+    +createNavBar(navDict)
+
+block menu
+    +createMenu(dictMenu, "Статья")
+
+block content
+    div.gallery
+        +createGallery(listImages)
+
+    +createArticleHead(articleHead)
+    +createArticleSections(articleSections)
