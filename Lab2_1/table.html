@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <title>Таблица экзотических животных</title>
+	<script src="js/data.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/table.js"></script>
+	<script src="js/filter.js"></script>
+	<script src="js/sort.js"></script>
+</head>
+<body>
+    <h2><a href="index.html">Главная страница</a></h2>
+    <h3><a href="table.html">Список животных</a></h3>
+    
+
+    <hr size="5" color="grey" noshade>
+
+    <h2 align="center">Таблица экзотических животных</h2>
+
+    <form>
+		<p><b>Значение по оси OX</b></p>
+		<p>
+			<label><input type="radio" name="axis_x">Место обитания</label><br>
+            <label><input type="radio" name="axis_x">Продолжительность жизни</label><br>
+			<label><input type="radio" name="axis_x">Год открытия</label>
+		</p>
+		<p><b>Значение по оси OY</b></p>
+		<p>
+			<label><input type="checkbox"> Максимальный вес</label><br>
+			<label><input type="checkbox"> Средний вес</label><br>
+			<label><input type="checkbox"> Минимальный размер</label><br>
+			<label><input type="checkbox"> Максимальный размер</label>
+		</p>
+		<input type="submit" value="Построить">
+	</form><br>
+    
+    <form id="filter">
+        <b><span>Фильтры</span></b><br>
+		<p>
+			<label for="name">Название: </label><input type="text" id="name">
+		</p>
+		<p>
+			<label for="arial">Место обитания: </label><input type="text" id="arial">
+		</p>
+		<p>
+			<label>
+				Вес, кг: от <input type="number" size="8" id="weight_from">
+			</label>
+			<label>
+				до <input type="number" size="8" id="weight_to">
+			</label>
+		</p>
+        <p>
+			<label>
+				Размер, см: от <input type="number" size="8" id="size_from">
+			</label>
+			<label>
+				до <input type="number" size="8" id="size_to">
+			</label>
+		</p>
+        <p>
+			<label>
+				Продолжительность жизни, лет: от <input type="number" size="8" id="lifespan_from">
+			</label>
+			<label>
+				до <input type="number" size="8" id="lifespan_to">
+			</label>
+		</p>
+        <p>
+			<label>
+				Год открытия: от <input type="number" size="8" id="year_from">
+			</label>
+			<label>
+				до <input type="number" size="8" id="year_to">
+			</label>
+		</p>
+		<input type="button" value="Найти">
+		<input type="button" value="Очистить фильтры">
+	</form><br>
+
+    <form id="sort">
+        <b><span>Сортировка</span></b>
+		<p>
+            <span>
+                Первый уровень:
+                <select id="sort1">
+                </select>
+            </span>
+            <span>по убыванию? <input type="checkbox" id="sort1_desc"></span>
+		</p><br>
+        <p>
+			
+			Второй уровень:
+			<select id="sort2">
+			</select>
+			<span>по убыванию? <input type="checkbox" id="sort2_desc"></span>
+		</p><br>
+        <p>
+			Третий уровень:
+			<select id="sort3">
+			</select>
+			<span>по убыванию? <input type="checkbox" id="sort3_desc"></span>
+		</p> <input type="button" value="Сортировать" >
+        <input type="button" value="Сбросить сортировку">
+	</form><br>
+
+    <table border="1" cellpadding="5" cellspacing="0" width="50%" id="tbl">
+    </table>
+
+
+    <hr>
+    <p>
+        <b>Разработчик:</b><br> 
+		Б9123-09.03.04 (4 подгруппа)<br> 
+		Манжелей Никита Александрович
+    </p>
+</body>
+</html>
