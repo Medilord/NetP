@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Трансформация и анимация</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="Resources/d3.v7.min.js"> </script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/image.js"></script>
+    <script src="JavaScript/path.js"></script>
+</head>
+<body>
+<form id="setting">
+    <p id="speed_settings">Анимация<br>
+        <label for="time">время: </label>
+        <input type="number" id="time" value="6000" max="1" min="60000">
+    </p>
+
+    <p id="scale_settings">Масштаб<br>
+        <label for="sx">по x: </label>
+        <input type="number" id="sx" value="1" max="600" min="0">
+        до <input type="number" id="sx_finish" value="1.5" max="600" min="0">
+        <br>
+        <label for="sy">по y: </label>
+        <input type="number" id="sy" value="1" max="600" min="0">
+        до <input type="number" id="sy_finish" value="1.5" max="600" min="0">
+    </p>
+
+    <p id="rotation_settings">Поворот<br>
+        <label for="ang">угол: </label>
+        <input type="number" id="ang" value="0" max="360" min="0">
+        до <input type="number" id="ang_finish" value="180" max="360" min="0">
+        <br>
+    </p>
+
+    <input type="button" value="Анимировать">
+    <input type="button" value="Очистить">
+</form>
+
+
+<svg></svg>
+
+</body>
+</html>
