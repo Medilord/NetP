@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Фильтры и сортировка</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="JavaScript/data.js"></script>
+        <script src="JavaScript/main.js"></script>
+        <script src="JavaScript/table.js"></script>
+        <script src="JavaScript/filter.js"></script>
+        <script src="JavaScript/sort.js"></script>
+    </head>
+    <body>
+        <div class="forms-container">
+            <form id="filter">
+                <div class="filter__header">Фильтр</div>
+                <p>
+                    <label for="structure">Название:</label>
+                    <input type="text" id="structure">
+                </p>
+                <p>
+                    <label for="category">Тип:</label>
+                    <input type="text" id="category">
+                </p>
+                <p>
+                    <label for="country">Страна:</label>
+                    <input type="text" id="country">
+                </p>
+                <p>
+                    <label for="city">Город:</label>
+                    <input type="text" id="city">
+                </p>
+                <p>
+                    <label for="yearFrom">Год: </label>
+                    от <input type="number" id="yearFrom">
+                    до <input type="number" id="yearTo">
+                </p>
+                <p>
+                    <label for="heightFrom">Высота:</label>
+                    от <input type="number" id="heightFrom">
+                    до <input type="number" id="heightTo">
+                </p>
+                <input type="button" value="Найти">
+                <input type="button" value="Очистить фильтры">
+            </form>
+            <form id="sort">
+                <div class="sort__header">Сортировка</div>
+                <p> Сортировать по</p>
+                <p>
+                    <select id="sort1">
+                    </select>
+                    по убыванию? <input type="checkbox" id="sort1_desc">
+                </p>
+                <p>
+                    <select id="sort2">
+                    </select>
+                    по убыванию? <input type="checkbox" id="sort2_desc">
+                </p>
+                <input type="button" value="Сортировать">
+                <input type="button" value="Сбросить сортировку">
+            </form>
+        </div>
+        <table id="tbl">
+        </table>
+    </body>
+
+</html>
