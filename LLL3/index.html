@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="Resources/d3.v7.min.js"> </script>
+    <script src="JavaScript/data.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/table.js"></script>
+    <script src="JavaScript/chart.js"></script>
+</head>
+<body>
+    <h3>Список самых высоких зданий</h3>
+
+    <form id="settings">
+        <p>Значение по оси OX</p>
+
+        <input type="radio" id="country" name="axis_selection" value="Страна" checked>
+        <label for="country">Страна</label><br>
+
+        <input type="radio" id="year" name="axis_selection" value="Год">
+        <label for="year">Год</label><br>
+
+        <p>Значение по оси OY</p>
+        <div>
+            <input type="checkbox" id="max_height" checked>
+            <label for="max_height">Максимальная высота</label><br>
+
+            <input type="checkbox" id="min_height">
+            <label for="min_height">Минимальная высота</label><br>
+            <p id="error">Выберите хотя бы одно значение</p>
+        </div>
+        <br>
+        <label for="type">Тип графика</label>
+        <select id="type">
+            <option>Точечная диаграмма</option>
+            <option>Гистограмма</option>
+        </select>
+        <br><br>
+
+        <input type="button" value="Построить"><br>
+    </form>
+
+    <br>
+
+    <svg></svg><br>
+
+    <br>
+
+    <input type="button" value="Скрыть таблицу"><br><br>
+    <table id="build"></table>
+</body>
+</html>

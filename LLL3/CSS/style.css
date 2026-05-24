@@ -1,0 +1,36 @@
+table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+.error-outline{
+    border: 1px solid red;
+}
+#error {
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
+td, th {
+    padding: 5px;
+}
+
+svg {
+    width: 800px;
+    height: 400px;
+}
+
+svg path, line {
+    fill: none;
+    stroke: black;
+    width: 1px;
+}
+
+svg text {
+    font: 8px Verdana;
+}

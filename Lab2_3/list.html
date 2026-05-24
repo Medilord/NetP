@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Экзотические животные</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="JavaScript/data.js"></script>
+	<script src="JavaScript/main.js"></script>
+	<script src="JavaScript/table.js"></script>
+	<script src="JavaScript/chart.js"></script>
+	<script src="Resources/d3.v7.min.js"></script>
+</head>
+<body>
+<h2><a href="index.html">Главная страница</a></h2>
+<h3><a href="table.html">Список животных</a></h3>
+
+
+<hr size="5" color="grey" noshade>
+
+<h2 align="center">Таблица экзотических животных</h2>
+
+
+<form id="chart">
+	<p><b>Значение по оси OX</b></p>
+	<p>
+		<label><input type="radio" name="axis_x" value="Место обитания" checked>Место обитания</label><br>
+		<label><input type="radio" name="axis_x" value="Продолжительность жизни">Продолжительность жизни</label><br>
+		<label><input type="radio" name="axis_x" value="Год открытия">Год открытия</label>
+	</p>
+	<p><b>Значение по оси OY</b></p>
+	<p id="checkboxes">
+		<label><input type="checkbox" value="max_weight" checked> Максимальный вес</label><br>
+		<label><input type="checkbox" value="avg_weight"> Средний вес</label><br>
+		<label><input type="checkbox" value="min_size"> Минимальный размер</label><br>
+		<label><input type="checkbox" value="max_size"> Максимальный размер</label>
+		<p id="error">Выберите хотя бы одно значение</p>
+	</p>
+	<p><b>Тип</b></p>
+	<p>
+		<select id="type">
+			<option value="dots">Точечная диаграмма</option>
+			<option value="graph">График</option>
+			<option value="column">Столбчатая диаграмма</option>
+		</select>
+	</p>
+	<p><b>Результат</b></p>
+	<input type="button" value="Построить">
+</form>
+<svg></svg>
+
+
+<table border="1" cellpadding="5" cellspacing="0" width="50%" id="tbl">
+</table>
+
+
+<hr>
+<p>
+	<b>Разработчик:</b><br>
+	Б9123-09.03.04 (4 подгруппа)<br>
+	Манжелей Никита Александрович
+</p>
+</body>
+</html>
